@@ -1039,7 +1039,7 @@ else:
             perturbed_label, _, nlb, nub,failed_labels, x = eran.analyze_box(specLB, specUB, domain, config.timeout_lp, config.timeout_milp, config.use_default_heuristic,label=label, prop=prop)
             print("nlb ", nlb[-1], " nub ", nub[-1],"adv labels ", failed_labels)
             if(perturbed_label==label):
-                print("img", i, "Verified", label)
+                print("img", i, "UNSAT", label)
                 verified_images += 1
             else:
                 if complete==True and (domain == 'deeppoly' or domain == 'deepzono'):
