@@ -54,97 +54,33 @@ pip3 install -r requirements.txt
 ERAN may not be compatible with older versions of tensorflow (we have tested ERAN with versions >= 1.11.0), so if you have an older version and want to keep it, then we recommend using the python virtual environment for installing tensorflow.
 
 
-Usage
--------------
+Reproducing results
+-------------------
+Note the Sigmoid and Tanh based onnx networks do not parse with the provided code of ERAN. For running with ERAN, one has to 
+
 
 ```
 cd tf_verify
 
-python3 . --netname <path to the network file> --epsilon <float between 0 and 1> --domain <deepzono/deeppoly/refinezono/refinepoly> --dataset <mnist/cifar10/acasxu> --zonotope <path to the zonotope specfile>  [optional] --complete <True/False> --timeout_lp <float> --timeout_milp <float> --use_area_heuristic <True/False> --mean <float(s)> --std <float(s)> --use_milp <True/False> --use_2relu --use_3relu --dyn_krelu --numproc <int>
+./run_acasxu.sh
+./run_ffn_relu.sh
+./run_colt.sh
+./run_oval.sh
 ```
 
-* ```<epsilon>```: specifies bound for the L∞-norm based perturbation (default is 0). This parameter is not required for testing ACAS Xu networks.
+The results are collected in "results/<category>" where the produced files contain the verification result (SAT, UNSAT, or UNKNOWN) and the runtime in seconds.
 
-* ```<zonotope>```: The Zonotope specification file can be comma or whitespace separated file where the first two integers can specify the number of input dimensions D and the number of error terms per dimension N. The following D*N doubles specify the coefficient of error terms. For every dimension i, the error terms are numbered from 0 to N-1 where the 0-th error term is the central error term. See an example here [https://github.com/eth-sri/eran/files/3653882/zonotope_example.txt]. This option only works with the "deepzono" or "refinezono" domain.
+PGD attacks for the Sigmoid, Tanh, ReLU based fully-connected networks and "mnist_0.3.onnx" can be run as follows:
 
-* ```<use_area_heuristic>```: specifies whether to use area heuristic for the ReLU approximation in DeepPoly (default is true).
-
-* ```<mean>```: specifies mean used to normalize the data. If the data has multiple channels the mean for every channel has to be provided (e.g. for cifar10 --mean 0.485, 0.456, 0.406) (default is 0 for non-geometric mnist and 0.5 0.5 0.5 otherwise)
-
-* ```<std>```: specifies standard deviation used to normalize the data. If the data has multiple channels the standard deviaton for every channel has to be provided (e.g. for cifar10 --std 0.2 0.3 0.2) (default is 1 1 1)
-
-* ```<use_milp>```: specifies whether to use MILP (default is true).
-
-* ```<sparse_n>```: specifies the size of "k" for the kReLU framework (default is 70).
-
-* ```<numproc>```: specifies how many processes to use for MILP, LP and k-ReLU (default is the number of processors in your machine).
-
-
-* ```<geometric>```: specifies whether to do geometric analysis (default is false).
-
-* ```<geometric_config>```: specifies the geometric configuration file location.
-
-* ```<data_dir>```: specifies the geometric data location.
-
-* ```<num_params>```: specifies the number of transformation parameters (default is 0)
-
-* ```<attack>```: specifies whether to verify attack images (default is false).
-
-* ```<specnumber>```: the property number for the ACASXu networks
-
-* Refinezono and RefinePoly refines the analysis results from the DeepZ and DeepPoly domain respectively using the approach in our ICLR'19 paper. The optional parameters timeout_lp and timeout_milp (default is 1 sec for both) specify the timeouts for the LP and MILP forumlations of the network respectively. 
-
-* Since Refinezono and RefinePoly uses timeout for the gurobi solver, the results will vary depending on the processor speeds. 
-
-* Setting the parameter "complete" (default is False) to True will enable MILP based complete verification using the bounds provided by the specified domain. 
-
-* When ERAN fails to prove the robustness of a given network in a specified region, it searches for an adversarial example and prints an adversarial image within the specified adversarial region along with the misclassified label and the correct label. ERAN does so for both complete and incomplete verification. 
-
-
-
-Example
--------------
-
-L_oo Specification
 ```
-python3 . --netname ../nets/pytorch/mnist/convBig__DiffAI.pyt --epsilon 0.1 --domain deepzono --dataset mnist
+cd attacks
+
+./run_attacks_neel.sh
+./run_attacks_pat.sh
+./run_attacks_colt.sh
 ```
 
-will evaluate the local robustness of the MNIST convolutional network (upto 35K neurons) with ReLU activation trained using DiffAI on the 100 MNIST test images. In the above setting, epsilon=0.1 and the domain used by our analyzer is the deepzono domain. Our analyzer will print the following:
-
-* 'Verified safe' for an image when it can prove the robustness of the network 
-
-* 'Verified unsafe' for an image for which it can provide a concrete adversarial example
-
-* 'Failed' when it cannot. 
-
-* It will also print an error message when the network misclassifies an image.
-
-* the timing in seconds.
-
-* The ratio of images on which the network is robust versus the number of images on which it classifies correctly.
- 
-
-Zonotope Specification
-```
-python3 . --netname ../nets/pytorch/mnist/convBig__DiffAI.pyt --zonotope some_path/zonotope_example.txt --domain deepzono 
-```
-
-will check if the Zonotope specification specified in "zonotope_example" holds for the network and will output "Verified safe", "Verified unsafe" or "Failed" along with the timing.
-
-Similarly, for the ACAS Xu networks, ERAN will output whether the property has been verified along with the timing.
-
-
-ACASXu Specification
-```
-python3 . --netname ../data/acasxu/nets/ACASXU_run2a_3_3_batch_2000.onnx --dataset acasxu --domain deepzono  --specnumber 9
-```
-will run DeepZ for analyzing property 9 of ACASXu benchmarks. The ACASXU networks are in data/acasxu/nets directory and the one chosen for a given property is defined in the Reluplex paper. 
-
-
-
-
-
+In our results, we only report those attacks for which the overall time of running the verifier and attack is less than the specified timeout.
 
 Publications
 -------------
