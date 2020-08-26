@@ -1,4 +1,4 @@
-ERAN <img width="100" alt="portfolio_view" align="right" src="http://safeai.ethz.ch/img/sri-logo.svg">
+ERAN for VNN COMP 2020 <img width="100" alt="portfolio_view" align="right" src="http://safeai.ethz.ch/img/sri-logo.svg">
 ========
 
 ![High Level](https://raw.githubusercontent.com/eth-sri/eran/master/overview.png)
@@ -17,9 +17,6 @@ ERAN supports networks with ReLU, Sigmoid and Tanh activations and is sound unde
 
 All analysis are implemented using the [ELINA](http://elina.ethz.ch/) library for numerical abstractions. More details can be found in the publications below. 
 
-ERAN vs AI2
---------------------
-Note that ERAN subsumes the first abstract interpretation based analyzer [AI2](https://www.sri.inf.ethz.ch/publications/gehr2018ai), so if you aim to compare, please use ERAN as a baseline. 
 
 
 USER MANUAL
@@ -35,109 +32,9 @@ python3.6 or higher, tensorflow 1.11 or higher, numpy.
 
 Installation
 ------------
-Clone the ERAN repository via git as follows:
-```
-git clone https://github.com/eth-sri/ERAN.git
-cd ERAN
-```
+
 
 The dependencies for ERAN can be installed step by step as follows (sudo rights might be required):
-
-Install m4:
-```
-wget ftp://ftp.gnu.org/gnu/m4/m4-1.4.1.tar.gz
-tar -xvzf m4-1.4.1.tar.gz
-cd m4-1.4.1
-./configure
-make
-make install
-cp src/m4 /usr/bin
-cd ..
-rm m4-1.4.1.tar.gz
-```
-
-Install gmp:
-```
-wget https://gmplib.org/download/gmp/gmp-6.1.2.tar.xz
-tar -xvf gmp-6.1.2.tar.xz
-cd gmp-6.1.2
-./configure --enable-cxx
-make
-make install
-cd ..
-rm gmp-6.1.2.tar.xz
-```
-
-Install mpfr:
-```
-wget https://www.mpfr.org/mpfr-current/mpfr-4.0.2.tar.xz
-tar -xvf mpfr-4.0.2.tar.xz
-cd mpfr-4.0.2
-./configure
-make
-make install
-cd ..
-rm mpfr-4.0.2.tar.xz
-```
-
-Install cddlib:
-```
-wget https://github.com/cddlib/cddlib/releases/download/0.94j/cddlib-0.94j.tar.gz
-tar -xvf cddlib-0.94j.tar.gz
-cd cddlib-0.94j
-./configure
-make
-make install
-cd ..
-rm cddlib-0.94j.tar.gz
-
-```
-
-Install ELINA:
-```
-git clone https://github.com/eth-sri/ELINA.git
-cd ELINA
-./configure -use-deeppoly
-make
-make install
-cd ..
-```
-
-Install Gurobi:
-```
-wget https://packages.gurobi.com/9.0/gurobi9.0.0_linux64.tar.gz
-tar -xvf gurobi9.0.0_linux64.tar.gz
-cd gurobi900/linux64/src/build
-sed -ie 's/^C++FLAGS =.*$/& -fPIC/' Makefile
-make
-cp libgurobi_c++.a ../../lib/
-cd ../../
-cp lib/libgurobi90.so /usr/lib
-python3 setup.py install
-cd ../../
-
-```
-
-Update environment variables:
-```
-export GUROBI_HOME="Current_directory/gurobi900/linux64"
-export PATH="${PATH}:${GUROBI_HOME}/bin"
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib:${GUROBI_HOME}/lib
-
-```
-
-Install DeepG (note that with an already existing version of ERAN you have to start at step Install Gurobi):
-```
-git clone https://github.com/eth-sri/deepg.git
-cd deepg/code
-mkdir build
-make shared_object
-cp ./build/libgeometric.so /usr/lib
-cd ../..
-
-```
-
-We also provide scripts that will install ELINA and all the necessary dependencies. One can run it as follows:
 
 ```
 sudo ./install.sh
@@ -244,32 +141,9 @@ python3 . --netname ../data/acasxu/nets/ACASXU_run2a_3_3_batch_2000.onnx --datas
 ```
 will run DeepZ for analyzing property 9 of ACASXu benchmarks. The ACASXU networks are in data/acasxu/nets directory and the one chosen for a given property is defined in the Reluplex paper. 
 
-Geometric analysis
-
-```
-python3 . --netname ../nets/pytorch/mnist/convBig__DiffAI.pyt --geometric --geometric_config ../deepg/examples/example1/config.txt --num_params 1 --dataset mnist
-```
-will on the fly generate geometric perturbed images and evaluate the network against them. For more information on the geometric configuration file please see [Format of the configuration file in DeepG](https://github.com/eth-sri/deepg#format-of-configuration-file).
 
 
-```
-python3 . --netname ../nets/pytorch/mnist/convBig__DiffAI.pyt --geometric --data_dir ../deepg/examples/example1/ --num_params 1 --dataset mnist --attack
-```
-will evaluate the generated geometric perturbed images in the given data_dir and also evaluate generated attack images.
 
-
-Recommended Configuration for Scalable Complete Verification
----------------------------------------------------------------------------------------------
-Use the "deeppoly" or "deepzono" domain with "--complete True" option
-
-
-Recommended Configuration for More Precise but relatively expensive Incomplete Verification
-----------------------------------------------------------------------------------------------
-Use the "refinepoly" domain with "--use_milp True", "--sparse_n 12", "--refine_neurons", "timeout_milp 10", and "timeout_lp 10" options
-
-Recommended Configuration for Faster but relatively imprecise Incomplete Verification
------------------------------------------------------------------------------------------------
-Use the "deeppoly" domain
 
 
 Publications
@@ -389,186 +263,8 @@ We ran our experiments for the feedforward networks on a 3.3 GHz 10 core Intel i
 
 In the following, we compare the precision and performance of DeepZ and DeepPoly on a subset of the neural networks listed above in multi-threaded mode. In can be seen that DeepPoly is overall more precise than DeepZ but it is slower than DeepZ on the convolutional networks. 
 
-![High Level](https://files.sri.inf.ethz.ch/eran/plots/mnist_6_500.png)
-
-![High Level](https://files.sri.inf.ethz.ch/eran/plots/mnist_convsmall.png)
-
-![High Level](https://files.sri.inf.ethz.ch/eran/plots/mnist_sigmoid_tanh.png)
-
-![High Level](https://files.sri.inf.ethz.ch/eran/plots/cifar10_convsmall.png)
 
 
-The table below compares the performance and precision of DeepZ and DeepPoly on our large networks trained with DiffAI. 
-
-
-<table aligh="center">
-  <tr>
-    <td>Dataset</td>
-    <td>Model</td>
-    <td>&epsilon;</td>
-    <td colspan="2">% Verified Robustness</td>
-    <td colspan="2">% Average Runtime (s)</td>
-  </tr>
-  <tr>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td> DeepZ </td>
-   <td> DeepPoly </td>
-   <td> DeepZ </td> 
-   <td> DeepPoly </td>
-  </tr>
-
-<tr>
-   <td> MNIST</td>
-   <td> ConvBig</td>
-   <td> 0.1</td>
-   <td> 97 </td>
-   <td> 97 </td>
-   <td> 5 </td> 
-   <td> 50 </td>
-</tr>
-
-
-<tr>
-   <td> </td>
-   <td> ConvBig</td>
-   <td> 0.2</td>
-   <td> 79 </td>
-   <td> 78 </td>
-   <td> 7 </td> 
-   <td> 61 </td>
-</tr>
-
-<tr>
-   <td> </td>
-   <td> ConvBig</td>
-   <td> 0.3</td>
-   <td> 37 </td>
-   <td> 43 </td>
-   <td> 17 </td> 
-   <td> 88 </td>
-</tr>
-
-<tr>
-   <td> </td>
-   <td> ConvSuper</td>
-   <td> 0.1</td>
-   <td> 97 </td>
-   <td> 97 </td>
-   <td> 133 </td> 
-   <td> 400 </td>
-</tr>
-
-<tr>
-   <td> </td>
-   <td> Skip</td>
-   <td> 0.1</td>
-   <td> 95 </td>
-   <td> N/A </td>
-   <td> 29 </td> 
-   <td> N/A </td>
-</tr>
-
-<tr>
-   <td> CIFAR10</td>
-   <td> ConvBig</td>
-   <td> 0.006</td>
-   <td> 50 </td>
-   <td> 52 </td>
-   <td> 39 </td> 
-   <td> 322 </td>
-</tr>
-
-
-<tr>
-   <td> </td>
-   <td> ConvBig</td>
-   <td> 0.008</td>
-   <td> 33 </td>
-   <td> 40 </td>
-   <td> 46 </td> 
-   <td> 331 </td>
-</tr>
-
-
-</table>
-
-
-The table below compares the timings of complete verification with ERAN for all ACASXu benchmarks. 
-
-
-<table aligh="center">
-  <tr>
-    <td>Property</td>
-    <td>Networks</td>
-    <td colspan="1">% Average Runtime (s)</td>
-  </tr>
-  
-  <tr>
-   <td> 1</td>
-   <td> all 45</td>
-   <td> 15.5 </td>
-  </tr>
-
-<tr>
-   <td> 2</td>
-   <td> all 45</td>
-   <td> 11.4 </td>
-  </tr>
-
-<tr>
-   <td> 3</td>
-   <td> all 45</td>
-   <td> 1.9 </td>
-  </tr>
-  
-<tr>
-   <td> 4</td>
-   <td> all 45</td>
-   <td> 1.1 </td>
-  </tr>
-
-<tr>
-   <td> 5</td>
-   <td> 1_1</td>
-   <td> 26 </td>
-  </tr>
-
-<tr>
-   <td> 6</td>
-   <td> 1_1</td>
-   <td> 10 </td>
-  </tr>
-  
-<tr>
-   <td> 7</td>
-   <td> 1_9</td>
-   <td> 83 </td>
-  </tr>
-
-<tr>
-   <td> 8</td>
-   <td> 2_9</td>
-   <td> 111 </td>
-  </tr>
-
-<tr>
-   <td> 9</td>
-   <td> 3_3</td>
-   <td> 9 </td>
-  </tr>
-  
-<tr>
-   <td> 10</td>
-   <td> 4_5</td>
-   <td> 2.1 </td>
-  </tr>
-
-</table>
-
-
-More experimental results can be found in our papers.
 
 Contributors
 --------------
