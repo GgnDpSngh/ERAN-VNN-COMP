@@ -56,7 +56,7 @@ ERAN may not be compatible with older versions of tensorflow (we have tested ERA
 
 Reproducing results
 -------------------
-We provide results computed on our machines in the folder "tf_verify/results/<category>".  The produced files contain the verification result (SAT, UNSAT, or UNKNOWN) and the runtime in seconds. This files in this folder will be overwritten by our scripts. One can copy it to another folder for reference. 
+We provide results computed on our machines in the folder "tf_verify/competition_results/<category>". The produced files contain the verification result (SAT, UNSAT, or UNKNOWN) and the runtime in seconds. Both the verification results and the runtime are obtained by combining the respective quatities from the verifier and the attack algorithm. In our results, we only report those attacks for which the overall time of running the verifier and attack is less than the specified timeout.
 
 
 ```
@@ -97,8 +97,8 @@ cd attacks
 ./run_attacks_pat.sh
 ./run_attacks_colt.sh
 ```
+The corresponding output is produced in the same folder.
 
-In our results, we only report those attacks for which the overall time of running the verifier and attack is less than the specified timeout.
 
 Publications
 -------------
