@@ -1,6 +1,9 @@
 import tensorflow as tf
 import numpy as np
-from tensorflow.contrib import graph_editor as ge
+if tf.__version__[0]=='2':
+    from tf.compat.v1.contrib import graph_editor as ge
+else:
+    from tensorflow.contrib import graph_editor as ge
 
 # https://arxiv.org/pdf/2003.06878.pdf
 def create_pgd_graph( lb, ub, sess, tf_input, tf_output, target):
