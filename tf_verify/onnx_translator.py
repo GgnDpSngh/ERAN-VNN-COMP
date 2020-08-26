@@ -468,7 +468,7 @@ class ONNXTranslator:
 
 	def ignore_node(self, node, operation_types, reshape_map):
 		operation_types.pop()
-		input_name = node.input[0]
+		input_name = node.input[1]
 		#print("ignore ", len(node.input), reshape_map)
 		output_name = node.output[0]
 		if input_name in reshape_map:
