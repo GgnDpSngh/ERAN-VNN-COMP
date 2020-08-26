@@ -66,11 +66,12 @@ cd tf_verify
 ./run_ffn_relu.sh
 ./run_colt.sh
 ./run_oval.sh
+./run_neel.sh
 ```
 
 The results are collected in "results/<category>" where the produced files contain the verification result (SAT, UNSAT, or UNKNOWN) and the runtime in seconds.
 
-PGD attacks for the Sigmoid, Tanh, ReLU based fully-connected networks and "mnist_0.3.onnx" can be run as follows:
+Our code for PGD attacks require tensorflow models so we converted the onnx files into ".pb" type. PGD attacks for the Sigmoid, Tanh, ReLU based fully-connected networks and "mnist_0.3.onnx" can be run as follows:
 
 ```
 cd attacks
