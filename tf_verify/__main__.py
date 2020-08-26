@@ -1055,6 +1055,7 @@ else:
                             if(cex_label!=label):
                                 denormalize(adv_image[0], means, stds, dataset)
                                 print("img", i, "SAT ", adv_image, "cex label", cex_label, "correct label ", label)
+                                verified_images += 1
                             else:
                                 print("img", i, "UNKNOWN")
                 else:
@@ -1065,6 +1066,7 @@ else:
                         if(cex_label!=label):
                             denormalize(x,means, stds, dataset)
                             print("SAT ", x, "cex label ", cex_label, "correct label ", label)
+                            verified_images += 1
                         else:
                             print("img", i, "UNKNOWN")
                     else:
