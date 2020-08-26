@@ -56,8 +56,21 @@ ERAN may not be compatible with older versions of tensorflow (we have tested ERA
 
 Reproducing results
 -------------------
-Note that for parsing the Sigmoid and Tanh based onnx networks the code ERAN needs to be manually adjusted by changing line 471 of "onnx_translator.py" from
+We provide results computed on our machines in the folder "tf_verify/results/<category>".  The produced files contain the verification result (SAT, UNSAT, or UNKNOWN) and the runtime in seconds. This files in this folder will be overwritten by our scripts. One can copy it to another folder for reference. 
 
+
+```
+cd tf_verify
+
+./run_acasxu.sh
+./run_ffn_relu.sh
+./run_colt.sh
+./run_oval.sh
+```
+
+Note that for parsing the Sigmoid and Tanh based onnx networks the code ERAN needs to be manually adjusted as follows:
+
+* change line 471 of "onnx_translator.py" from
 ```
 input_name = node.input[0]
 ```
@@ -68,17 +81,12 @@ to
 input_name = node.input[1]
 ```
 
-```
-cd tf_verify
+After this change run:
 
-./run_acasxu.sh
-./run_ffn_relu.sh
-./run_colt.sh
-./run_oval.sh
+```
 ./run_neel.sh
 ```
 
-The results are collected in "results/<category>" where the produced files contain the verification result (SAT, UNSAT, or UNKNOWN) and the runtime in seconds.
 
 Our code for PGD attacks require tensorflow models so we converted the onnx files into ".pb" type. PGD attacks for the Sigmoid, Tanh, ReLU based fully-connected networks and "mnist_0.3.onnx" can be run as follows:
 

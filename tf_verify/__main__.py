@@ -297,7 +297,7 @@ parser.add_argument('--geometric', '-g', dest='geometric', default=config.geomet
 parser.add_argument('--input_box', default=config.input_box,  help='input box to use')
 parser.add_argument('--output_constraints', default=config.output_constraints, help='custom output constraints to check')
 parser.add_argument('--normalized_region', type=str2bool, default=config.normalized_region, help='Whether to normalize the adversarial region')
-
+parser.add_argument('--divide_by_255', type=str2bool, default=config.divide_by_255, help='Whether to normalize the image by dividing by 255')
 # Logging options
 parser.add_argument('--logdir', type=str, default=None, help='Location to save logs to. If not specified, logs are not saved and emitted to stdout')
 parser.add_argument('--logname', type=str, default=None, help='Directory of log files in `logdir`, if not specified timestamp is used')
@@ -1003,7 +1003,10 @@ else:
             break
         #if i < 7:
         #    continue
-        image= np.float64(test[1:len(test)])/np.float64(255)
+        if config.divide_by_255:
+            image= np.float64(test[1:len(test)])/np.float64(255)
+        else:
+            image= np.float64(test[1:len(test)])
         specLB = np.copy(image)
         specUB = np.copy(image)
 
@@ -1024,8 +1027,12 @@ else:
         if(label == int(test[0])):
             perturbed_label = None
             if config.normalized_region==True:
-                specLB = np.clip(image - epsilon,0,1)
-                specUB = np.clip(image + epsilon,0,1)
+                if config.divide_by_255:
+                    specLB = np.clip(image - epsilon,0,1)
+                    specUB = np.clip(image + epsilon,0,1)
+                else:
+                    specLB = image - epsilon
+                    specUB = image + epsilon
                 normalize(specLB, means, stds, dataset)
                 normalize(specUB, means, stds, dataset)
             else:

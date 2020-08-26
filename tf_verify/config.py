@@ -27,6 +27,7 @@ class config:
     subset = None
     target = None # 
     epsfile = None
+    divide_by_255 = True
 
     # refine options
     use_milp = True # Whether to use MILP
