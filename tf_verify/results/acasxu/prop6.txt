@@ -1,0 +1,7 @@
+netname  ../data/acasxu/nets/ACASXU_run2a_1_1_batch_2000.onnx  specnumber  6  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 6 UNSAT for Box 0 out of 2
+2.0868120193481445 seconds
+AcasXu property 6 UNSAT for Box 1 out of 2
+8.690367698669434 seconds
+Total time needed: 10.777268409729004 seconds
