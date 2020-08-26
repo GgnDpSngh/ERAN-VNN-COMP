@@ -100,3 +100,14 @@ wget https://files.sri.inf.ethz.ch/eran/nets/tensorflow/mnist/mnist_relu_3_50.tf
 
 ldconfig
 
+mkdir results
+
+mkdir results/acasxu
+
+mkdir results/FFN_relu
+
+mkdir results/colt
+
+mkdir results/oval
+
+mkdir results/neel

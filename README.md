@@ -87,6 +87,7 @@ After this change run:
 ./run_neel.sh
 ```
 
+The verifier results produced by the scripts can be found in "tf_verify/competition_results/<category>".
 
 Our code for PGD attacks require tensorflow models so we converted the onnx files into ".pb" type. PGD attacks for the Sigmoid, Tanh, ReLU based fully-connected networks and "mnist_0.3.onnx" can be run as follows:
 
