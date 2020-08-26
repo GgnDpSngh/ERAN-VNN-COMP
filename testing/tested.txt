@@ -1,0 +1,75 @@
+mnist, mnist_conv_maxpool.tf, deepzono, ERAN analyze error trace: Traceback (most recent call last):
+  File "check_models.py", line 187, in <module>
+    label, nn, nlb, nub, output_info = eran.analyze_box(specLB, specUB, domain, 1, 1, config.use_area_heuristic, testing=True)
+AttributeError: type object 'config' has no attribute 'use_area_heuristic'
+
+
+
+mnist, mnist_conv_maxpool.tf, refinezono, ERAN analyze error trace: Traceback (most recent call last):
+  File "check_models.py", line 187, in <module>
+    label, nn, nlb, nub, output_info = eran.analyze_box(specLB, specUB, domain, 1, 1, config.use_area_heuristic, testing=True)
+AttributeError: type object 'config' has no attribute 'use_area_heuristic'
+
+
+
+mnist, mnist_conv_maxpool.tf, deeppoly, ERAN analyze error trace: Traceback (most recent call last):
+  File "check_models.py", line 187, in <module>
+    label, nn, nlb, nub, output_info = eran.analyze_box(specLB, specUB, domain, 1, 1, config.use_area_heuristic, testing=True)
+AttributeError: type object 'config' has no attribute 'use_area_heuristic'
+
+
+
+mnist, mnist_conv_maxpool.tf, refinepoly, ERAN analyze error trace: Traceback (most recent call last):
+  File "check_models.py", line 187, in <module>
+    label, nn, nlb, nub, output_info = eran.analyze_box(specLB, specUB, domain, 1, 1, config.use_area_heuristic, testing=True)
+AttributeError: type object 'config' has no attribute 'use_area_heuristic'
+
+
+
+mnist, mnist_conv_maxpool.tf, deepzono, success
+mnist, mnist_conv_maxpool.tf, refinezono, ERAN analyze error trace: Traceback (most recent call last):
+  File "check_models.py", line 187, in <module>
+    label, nn, nlb, nub, output_info = eran.analyze_box(specLB, specUB, domain, 1, 1, config.use_default_heuristic, testing=True)
+  File "../tf_verify/eran.py", line 76, in analyze_box
+    dominant_class, nlb, nub = analyzer.analyze()
+  File "../tf_verify/analyzer.py", line 161, in analyze
+    element, nlb, nub = self.get_abstract0()
+  File "../tf_verify/analyzer.py", line 137, in get_abstract0
+    element_test_bounds = self.ir_list[i].transformer(self.nn, self.man, element, nlb, nub, self.relu_groups, 'refine' in self.domain, self.timeout_lp, self.timeout_milp, self.use_default_heuristic, self.testing)
+  File "../tf_verify/deepzono_nodes.py", line 757, in transformer
+    element = refine_relu_with_solver_bounds(nn, self, man, element, nlb, nub, relu_groups, timeout_lp, timeout_milp, use_default_heuristic)
+  File "../tf_verify/deepzono_nodes.py", line 173, in refine_relu_with_solver_bounds
+    resl, resu, indices = get_bounds_for_layer_with_milp(nn, nn.specLB, nn.specUB, layerno, layerno, length, nlb, nub, relu_groups, use_milp,  candidate_vars, timeout)
+  File "../tf_verify/ai_milp.py", line 496, in get_bounds_for_layer_with_milp
+    counter, var_list, model = create_model(nn, LB_N0, UB_N0, nlb, nub, relu_groups, layerno+1, use_milp, relu_needed)
+  File "../tf_verify/ai_milp.py", line 287, in create_model
+    maxpool_counter = nn.maxpool_counter
+AttributeError: 'layers' object has no attribute 'maxpool_counter'
+
+
+
+mnist, mnist_conv_maxpool.tf, deeppoly, 
+eran, [124.39677361 149.84179436 126.14633698 122.11222838 136.49098178
+ 139.17434042 122.2098602  151.06530319 115.95607667 115.46991845], 
+model, [0.         0.45782521 3.96992366 0.98538299 0.         0.
+ 0.         5.65264178 0.         0.76631488]
+mnist, mnist_conv_maxpool.tf, deeppoly, started divergence at layer, 1, outputname, import/Relu:0, 
+difference, [ 0.          0.         -0.12075127 ...  0.         -0.03959576
+  0.        ]
+
+
+mnist, mnist_conv_maxpool.tf, refinepoly, ERAN analyze error trace: Traceback (most recent call last):
+  File "check_models.py", line 187, in <module>
+    label, nn, nlb, nub, output_info = eran.analyze_box(specLB, specUB, domain, 1, 1, config.use_default_heuristic, testing=True)
+  File "../tf_verify/eran.py", line 76, in analyze_box
+    dominant_class, nlb, nub = analyzer.analyze()
+  File "../tf_verify/analyzer.py", line 161, in analyze
+    element, nlb, nub = self.get_abstract0()
+  File "../tf_verify/analyzer.py", line 137, in get_abstract0
+    element_test_bounds = self.ir_list[i].transformer(self.nn, self.man, element, nlb, nub, self.relu_groups, 'refine' in self.domain, self.timeout_lp, self.timeout_milp, self.use_default_heuristic, self.testing)
+  File "../tf_verify/deeppoly_nodes.py", line 278, in transformer
+    refine_relu_with_solver_bounds(nn, self, man, element, nlb, nub, relu_groups, timeout_lp, timeout_milp, use_default_heuristic)
+NameError: name 'refine_relu_with_solver_bounds' is not defined
+
+
+
