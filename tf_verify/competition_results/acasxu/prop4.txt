@@ -1,0 +1,465 @@
+netname  ../data/acasxu/nets/ACASXU_run2a_1_1_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+5.056267976760864 seconds
+Total time needed: 5.056316614151001 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_1_2_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+2.0104923248291016 seconds
+Total time needed: 2.0105319023132324 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_1_3_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+2.2528111934661865 seconds
+Total time needed: 2.2528560161590576 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_1_4_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+1.043600082397461 seconds
+Total time needed: 1.0436301231384277 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_1_5_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+0.9293129444122314 seconds
+Total time needed: 0.9293422698974609 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_1_6_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+1.0348420143127441 seconds
+Total time needed: 1.0348691940307617 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_1_7_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+
+--------------------------------------------
+Warning: your license will expire in 3 days
+--------------------------------------------
+
+Using license file /home/gagandeep/gurobi.lic
+
+--------------------------------------------
+Warning: your license will expire in 3 days
+--------------------------------------------
+
+Using license file /home/gagandeep/gurobi.lic
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+
+--------------------------------------------
+Warning: your license will expire in 3 days
+--------------------------------------------
+
+Using license file /home/gagandeep/gurobi.lic
+Academic license - for non-commercial use only
+
+--------------------------------------------
+Warning: your license will expire in 3 days
+--------------------------------------------
+
+Using license file /home/gagandeep/gurobi.lic
+Academic license - for non-commercial use only
+
+--------------------------------------------
+Warning: your license will expire in 3 days
+--------------------------------------------
+
+Using license file /home/gagandeep/gurobi.lic
+Academic license - for non-commercial use only
+
+--------------------------------------------
+Warning: your license will expire in 3 days
+--------------------------------------------
+
+Using license file /home/gagandeep/gurobi.lic
+Academic license - for non-commercial use only
+
+--------------------------------------------
+Warning: your license will expire in 3 days
+--------------------------------------------
+
+Using license file /home/gagandeep/gurobi.lic
+
+--------------------------------------------
+Warning: your license will expire in 3 days
+--------------------------------------------
+
+Using license file /home/gagandeep/gurobi.lic
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+
+--------------------------------------------
+Warning: your license will expire in 3 days
+--------------------------------------------
+
+Using license file /home/gagandeep/gurobi.lic
+Academic license - for non-commercial use only
+
+--------------------------------------------
+Warning: your license will expire in 3 days
+--------------------------------------------
+
+Using license file /home/gagandeep/gurobi.lic
+Academic license - for non-commercial use only
+property violated at  [-0.30232463466518084, -0.009557469849119468, 0.0, 0.33566820868117997, 0.11111111109999999] output_score [-0.018084796019837118, -0.017641672888912597, -0.01695430296798988, -0.016299050682715883, -0.015813795984772804]
+property violated at  [-0.3035307914110715, -0.00716197245, 0.0, 0.3479037739757701, 0.08333265846936988] output_score [-0.018553920720696445, -0.017433496722076527, -0.0169741545799479, -0.01631439675433124, -0.01591138141987395]
+property violated at  [-0.30229166871827895, -0.009548612205700541, 0.0, 0.37762290987028696, 0.1388888889] output_score [-0.01805291422277046, -0.017665520124632336, -0.01691622786209234, -0.016329029184203273, -0.015765718532902453]
+property violated at  [-0.30353122130613397, -0.008355493103496994, 0.0, 0.3181818182, 0.13888950824211943] output_score [-0.01787585412728473, -0.0175078134826799, -0.01715633402180244, -0.016243437220206432, -0.015863757337251795]
+property violated at  [-0.3035308527500672, -0.007161116366283378, 0.0, 0.37587302899635766, 0.08333233467644235] output_score [-0.01873742823616817, -0.017347381777228322, -0.01691110665556236, -0.016323193728612084, -0.01585075214829282]
+property violated at  [-0.3035310261163728, -0.00954929649300116, 0.0, 0.36188813594996394, 0.11111111109999999] output_score [-0.01821215830468336, -0.017589217583747978, -0.016965032948186652, -0.016316341314434414, -0.015854171326237558]
+property violated at  [-0.3035310690557675, -0.007161975426379134, 0.0, 0.31993009140286915, 0.08333333329999998] output_score [-0.018376085904144725, -0.017522894092480323, -0.016976775417154383, -0.016321544471281237, -0.01588801896103849]
+property violated at  [-0.30353106932608176, -0.008355597485971875, 0.0, 0.40559375436018763, 0.08333332950131582] output_score [-0.018897488515942452, -0.017338790989043347, -0.016925339164402864, -0.016368500818323608, -0.015855899852580124]
+property violated at  [-0.30353168718268125, -0.00716197245, 0.0, 0.34615384616923084, 0.1403506620920015] output_score [-0.017914255202665402, -0.017619062291937566, -0.017038303489677494, -0.01628425128344905, -0.01583067222585827]
+property violated at  [-0.30353107743795715, -0.009548657010958977, 0.0, 0.3898601398711539, 0.1111113303285392] output_score [-0.018366248753957294, -0.017496076591473866, -0.016943408641724656, -0.01629998701792197, -0.015855141437548476]
+AcasXu property 4 SAT for Box 0 out of 1
+1.7155210971832275 seconds
+Total time needed: 1.7155675888061523 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_1_8_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+
+--------------------------------------------
+Warning: your license will expire in 3 days
+--------------------------------------------
+
+Using license file /home/gagandeep/gurobi.lic
+Academic license - for non-commercial use only
+
+--------------------------------------------
+Warning: your license will expire in 3 days
+--------------------------------------------
+
+Using license file /home/gagandeep/gurobi.lic
+Academic license - for non-commercial use only
+
+--------------------------------------------
+Warning: your license will expire in 3 days
+--------------------------------------------
+
+Using license file /home/gagandeep/gurobi.lic
+Academic license - for non-commercial use only
+
+--------------------------------------------
+Warning: your license will expire in 3 days
+--------------------------------------------
+
+Using license file /home/gagandeep/gurobi.lic
+Academic license - for non-commercial use only
+
+--------------------------------------------
+Warning: your license will expire in 3 days
+--------------------------------------------
+
+Using license file /home/gagandeep/gurobi.lic
+Academic license - for non-commercial use only
+
+--------------------------------------------
+Warning: your license will expire in 3 days
+--------------------------------------------
+
+Using license file /home/gagandeep/gurobi.lic
+Academic license - for non-commercial use only
+
+--------------------------------------------
+Warning: your license will expire in 3 days
+--------------------------------------------
+
+Using license file /home/gagandeep/gurobi.lic
+Academic license - for non-commercial use only
+
+--------------------------------------------
+Warning: your license will expire in 3 days
+--------------------------------------------
+
+Using license file /home/gagandeep/gurobi.lic
+Academic license - for non-commercial use only
+
+--------------------------------------------
+Warning: your license will expire in 3 days
+--------------------------------------------
+
+Using license file /home/gagandeep/gurobi.lic
+Academic license - for non-commercial use only
+
+--------------------------------------------
+Warning: your license will expire in 3 days
+--------------------------------------------
+
+Using license file /home/gagandeep/gurobi.lic
+Academic license - for non-commercial use only
+property violated at  [-0.30353380043195827, -0.008355634524999999, 0.0, 0.3484801471009129, 0.15477241667861166] output_score [-0.019857103778684305, -0.017546396667427272, -0.017928347669708578, -0.016490150668684287, -0.017090842490865284]
+property violated at  [-0.3035313473733079, -0.008355634524999999, 0.0, 0.38257575758750006, 0.10863155407423933] output_score [-0.01996608440610359, -0.01776585147823215, -0.018026695724288926, -0.016737714898553323, -0.017189081542081194]
+property violated at  [-0.3035311561, -0.008355634524999999, 0.0, 0.3958333333437501, 0.145224047122988] output_score [-0.01985990917880673, -0.01754983724498332, -0.017941478026268623, -0.016490851213788803, -0.017103623317274226]
+property violated at  [-0.3035311561, -0.00716197245, 0.0, 0.33333330644426634, 0.12053571428214288] output_score [-0.019901264977777555, -0.017629126241093335, -0.01795459445750772, -0.016580327026895405, -0.01712488992336842]
+property violated at  [-0.3035307618862611, -0.008355634524999999, 0.0, 0.3977272727375001, 0.08482130850729862] output_score [-0.02005239185199334, -0.01789918993890762, -0.01810963492655668, -0.016890596278634967, -0.017274851429686128]
+property violated at  [-0.303531283766388, -0.008355634524999999, 0.0, 0.4128787878875001, 0.12053571428214288] output_score [-0.019921660255341585, -0.017638174082576945, -0.018004205240451276, -0.016593136316123316, -0.017167238717262175]
+property violated at  [-0.3035311561, -0.008355634524999999, 0.0, 0.3181818182, 0.14285825198106153] output_score [-0.01983875032065769, -0.017446303458587963, -0.01789134120090664, -0.01637347937577888, -0.017062814738023804]
+property violated at  [-0.30353116555388504, -0.00716197245, 0.0, 0.34848484850000006, 0.09672619045357143] output_score [-0.020010592905639585, -0.017865479345975786, -0.01805009824001029, -0.016848667807027155, -0.01721718826073735]
+property violated at  [-0.3035311561, -0.00716197245, 0.0, 0.3181818182, 0.0848214285392857] output_score [-0.020004557645728557, -0.017825226868565452, -0.018036052862849566, -0.016803218110033984, -0.017209960564138496]
+property violated at  [-0.30353136685437815, -0.008355634524999999, 0.0, 0.3674242424375001, 0.13243789232853695] output_score [-0.019902172055208944, -0.017670515481889786, -0.017963096955811875, -0.01662779745510591, -0.017124346797315726]
+AcasXu property 4 SAT for Box 0 out of 1
+1.5596528053283691 seconds
+Total time needed: 1.5596802234649658 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_1_9_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+
+--------------------------------------------
+Warning: your license will expire in 3 days
+--------------------------------------------
+
+Using license file /home/gagandeep/gurobi.lic
+Academic license - for non-commercial use only
+
+--------------------------------------------
+Warning: your license will expire in 3 days
+--------------------------------------------
+
+Using license file /home/gagandeep/gurobi.lic
+
+--------------------------------------------
+Warning: your license will expire in 3 days
+--------------------------------------------
+
+Using license file /home/gagandeep/gurobi.lic
+Academic license - for non-commercial use only
+
+--------------------------------------------
+Warning: your license will expire in 3 days
+--------------------------------------------
+
+Using license file /home/gagandeep/gurobi.lic
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+
+--------------------------------------------
+Warning: your license will expire in 3 days
+--------------------------------------------
+
+Using license file /home/gagandeep/gurobi.lic
+Academic license - for non-commercial use only
+
+--------------------------------------------
+Warning: your license will expire in 3 days
+--------------------------------------------
+
+Using license file /home/gagandeep/gurobi.lic
+Academic license - for non-commercial use only
+
+--------------------------------------------
+Warning: your license will expire in 3 days
+--------------------------------------------
+
+Using license file /home/gagandeep/gurobi.lic
+Academic license - for non-commercial use only
+
+--------------------------------------------
+Warning: your license will expire in 3 days
+--------------------------------------------
+
+Using license file /home/gagandeep/gurobi.lic
+Academic license - for non-commercial use only
+
+--------------------------------------------
+Warning: your license will expire in 3 days
+--------------------------------------------
+
+Using license file /home/gagandeep/gurobi.lic
+Academic license - for non-commercial use only
+
+--------------------------------------------
+Warning: your license will expire in 3 days
+--------------------------------------------
+
+Using license file /home/gagandeep/gurobi.lic
+Academic license - for non-commercial use only
+property violated at  [-0.30228657005, -0.008355634524999999, 0.0, 0.36363636365000007, 0.11111089840550667] output_score [-0.019918240012204953, -0.01818368853597235, -0.01809796895381549, -0.017271701039003457, -0.017221645610729315]
+property violated at  [-0.30228657005, -0.008355634524999999, 0.0, 0.3787888238334802, 0.08333333329999998] output_score [-0.019985523233539366, -0.01826837482705714, -0.018183014902378287, -0.01738398212582772, -0.01726976944834706]
+property violated at  [-0.30228657005, -0.008355634524999999, 0.0, 0.33333333335000004, 0.11283062733952293] output_score [-0.019907334975148135, -0.018141395130842574, -0.01810657069019251, -0.017218712880040996, -0.017238609951569308]
+property violated at  [-0.30228657005, -0.008355634524999999, 0.0, 0.3939406766890051, 0.11111111109999999] output_score [-0.01992047268954638, -0.018218753509826293, -0.018087010275529457, -0.017315763700957887, -0.01720578002765583]
+property violated at  [-0.30228657005, -0.008355634524999999, 0.0, 0.37878787880000003, 0.13888705768090018] output_score [-0.019852116132485737, -0.018137810961007295, -0.01802091576276276, -0.017209431012354715, -0.01717130059203339]
+property violated at  [-0.30228657005, -0.008355634524999999, 0.0, 0.34848484850000006, 0.1388886613061676] output_score [-0.0198495659329942, -0.018102178352235376, -0.01803837144983064, -0.017164458243349588, -0.017194706774390736]
+property violated at  [-0.30228737725099414, -0.008355634524999999, 0.0, 0.3484838311991644, 0.08506944441249999] output_score [-0.019977529667655963, -0.018225323930803283, -0.018174720202349583, -0.017329087232481038, -0.017272163743943532]
+property violated at  [-0.30228459574517264, -0.008355634524999999, 0.0, 0.3181818182, 0.08474088932572994] output_score [-0.01995086961479196, -0.018172801947543674, -0.018158582282698434, -0.01726647404420603, -0.017266781470518997]
+property violated at  [-0.3022866626710425, -0.00716197245, 0.0, 0.40909090910000007, 0.08506944441249999] output_score [-0.019985677482896737, -0.018298379134611, -0.018220690099633716, -0.017419076361920662, -0.01730978197342498]
+property violated at  [-0.30228655871954807, -0.008355634524999999, 0.0, 0.3181818182, 0.13888974114885477] output_score [-0.019840267763600417, -0.0180623054058143, -0.018048493015757283, -0.017114964712208473, -0.01721130033668652]
+AcasXu property 4 SAT for Box 0 out of 1
+1.4847967624664307 seconds
+Total time needed: 1.4848344326019287 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_2_1_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+0.9047017097473145 seconds
+Total time needed: 0.9047307968139648 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_2_2_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+1.1058900356292725 seconds
+Total time needed: 1.1059167385101318 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_2_3_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+1.3339998722076416 seconds
+Total time needed: 1.3340342044830322 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_2_4_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+0.7602038383483887 seconds
+Total time needed: 0.7602334022521973 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_2_5_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+0.7538063526153564 seconds
+Total time needed: 0.7538325786590576 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_2_6_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+0.8452849388122559 seconds
+Total time needed: 0.8453114032745361 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_2_7_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+1.135070562362671 seconds
+Total time needed: 1.1350970268249512 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_2_8_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+1.024301528930664 seconds
+Total time needed: 1.0243308544158936 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_2_9_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+1.0990357398986816 seconds
+Total time needed: 1.0990655422210693 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_3_1_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+1.3901851177215576 seconds
+Total time needed: 1.3902130126953125 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_3_2_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+1.0831892490386963 seconds
+Total time needed: 1.0832200050354004 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_3_3_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+0.937744140625 seconds
+Total time needed: 0.9377710819244385 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_3_4_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+0.732518196105957 seconds
+Total time needed: 0.7325425148010254 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_3_5_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+0.7709007263183594 seconds
+Total time needed: 0.7709271907806396 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_3_6_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+1.0433218479156494 seconds
+Total time needed: 1.0433542728424072 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_3_7_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+0.7729098796844482 seconds
+Total time needed: 0.7729368209838867 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_3_8_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+0.838249921798706 seconds
+Total time needed: 0.8382792472839355 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_3_9_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+0.8943908214569092 seconds
+Total time needed: 0.8944194316864014 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_4_1_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+1.854522466659546 seconds
+Total time needed: 1.854550838470459 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_4_2_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+0.7884535789489746 seconds
+Total time needed: 0.7884838581085205 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_4_3_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+1.0660183429718018 seconds
+Total time needed: 1.066044807434082 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_4_4_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+0.7944231033325195 seconds
+Total time needed: 0.7944517135620117 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_4_5_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+1.0069191455841064 seconds
+Total time needed: 1.0069468021392822 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_4_6_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+0.9933497905731201 seconds
+Total time needed: 0.9933798313140869 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_4_7_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+0.840301513671875 seconds
+Total time needed: 0.8403282165527344 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_4_8_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+0.8814690113067627 seconds
+Total time needed: 0.8814976215362549 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_4_9_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+0.9180943965911865 seconds
+Total time needed: 0.9181210994720459 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_5_1_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+1.2855110168457031 seconds
+Total time needed: 1.2855358123779297 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_5_2_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+1.9475343227386475 seconds
+Total time needed: 1.9475631713867188 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_5_3_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+0.8249566555023193 seconds
+Total time needed: 0.8249833583831787 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_5_4_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+0.6672308444976807 seconds
+Total time needed: 0.667259931564331 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_5_5_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+0.749946117401123 seconds
+Total time needed: 0.749971866607666 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_5_6_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+1.0179400444030762 seconds
+Total time needed: 1.017970085144043 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_5_7_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+0.9006381034851074 seconds
+Total time needed: 0.9006707668304443 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_5_8_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+0.792515754699707 seconds
+Total time needed: 0.7925410270690918 seconds
+netname  ../data/acasxu/nets/ACASXU_run2a_5_9_batch_2000.onnx  specnumber  4  domain  deeppoly  dataset  acasxu args complete  True  complete  True  timeout_lp  1
+This network has 300 neurons.
+AcasXu property 4 UNSAT for Box 0 out of 1
+1.1399047374725342 seconds
+Total time needed: 1.1399319171905518 seconds
