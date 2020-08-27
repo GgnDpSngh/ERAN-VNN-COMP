@@ -191,7 +191,11 @@ class Analyzer:
                     break
                 if self.nn.layertypes[i] == 'Conv':
                     is_conv = True
-            if len(nlb[first_FC]) < 1000 and is_conv and len(self.nn.specLB)<1000:
+            num_neurons = 0
+            for i in range(self.nn.numlayer):
+                if self.nn.layertypes[i]=='FC':
+                    num_neurons = num_neurons + len(nlb[i])
+            if len(nlb[first_FC]) < 1000 and is_conv and (len(self.nn.specLB)<1000 or num_neurons < 10000):
                 milp_for_FC = True
             print("milp for FC ", milp_for_FC)
             counter, var_list, model = create_model(self.nn, self.nn.specLB, self.nn.specUB, nlb, nub,self.relu_groups, self.nn.numlayer, config.complete==True)

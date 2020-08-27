@@ -372,7 +372,10 @@ def create_model(nn, LB_N0, UB_N0, nlb, nub, relu_groups, numlayer, use_milp):
     residual_counter = nn.residual_counter
     pool_counter = nn.pool_counter
     activation_counter = nn.activation_counter
-    
+    num_neurons = 0
+    for i in range(nn.numlayer):
+        if nn.layertypes[i]=='ReLU':
+           num_neurons = num_neurons + len(nlb[i])
     nn.ffn_counter = 0
     nn.conv_counter = 0
     nn.residual_couter = 0
@@ -451,7 +454,7 @@ def create_model(nn, LB_N0, UB_N0, nlb, nub, relu_groups, numlayer, use_milp):
             #    use_milp = True
             #else:
             #    use_milp = False
-            milp_for_fc = (nn.conv_counter > 0) and (len(nlb[i])<1000) and num_pixels < 1000
+            milp_for_fc = (nn.conv_counter > 0) and (len(nlb[i])<1000) and (num_pixels < 1000 or num_neurons < 10000)
             if relu_groups is None:
                 counter = handle_relu(model, var_list, counter, len(nlb[i]), nlb[index-1], nub[index-1], [], use_milp, milp_for_fc)
             #elif(use_milp):
