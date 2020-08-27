@@ -27,7 +27,7 @@ Requirements
 ------------
 GNU C compiler, ELINA, Gurobi's Python interface,
 
-python3.7, tensorflow 1.11 or higher, numpy.
+python3.7, virtualenv, tensorflow 1.11 or higher, numpy.
 
 
 Installation
