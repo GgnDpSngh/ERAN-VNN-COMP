@@ -83,8 +83,8 @@ sed -ie 's/^C++FLAGS =.*$/& -fPIC/' Makefile
 make
 cp libgurobi_c++.a ../../lib/
 cp ../../lib/libgurobi90.so /usr/lib
-cd ../..
-python3 setup.py install
+#cd ../..
+#python3 setup.py install
 cd ../..
 
 export GUROBI_HOME="$(pwd)/gurobi900/linux64"
