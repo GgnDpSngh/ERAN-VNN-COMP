@@ -48,8 +48,6 @@ Note that to run ERAN with Gurobi one needs to obtain an academic license for gu
 To install the remaining python dependencies (numpy and tensorflow), type:
 
 ```
-virtualenv -p python3.7 eran
-source eran/bin/activate
 pip3 install -r requirements.txt
 ```
 
