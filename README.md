@@ -103,6 +103,8 @@ pip3 install tensorflow==1.14
 ```
 The corresponding output is produced in the same folder.
 
+Note that since all the experiments have a timeout, due to the difference in machine speeds, one may get better or worse results than reported in the "competition_results" directory.
+
 
 Publications
 -------------
