@@ -191,7 +191,7 @@ class Analyzer:
                     break
                 if self.nn.layertypes[i] == 'Conv':
                     is_conv = True
-            if len(nlb[first_FC]) < 1000 and is_conv and len(nn.specLB)<1000:
+            if len(nlb[first_FC]) < 1000 and is_conv and len(self.nn.specLB)<1000:
                 milp_for_FC = True
             print("milp for FC ", milp_for_FC)
             counter, var_list, model = create_model(self.nn, self.nn.specLB, self.nn.specUB, nlb, nub,self.relu_groups, self.nn.numlayer, config.complete==True)
