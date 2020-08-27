@@ -150,7 +150,7 @@ Team
 
 * Makarchuk Hleb - hleb.makarchuk@inf.ethz.ch
 
-* [Dimitar I. Dimitrov] (https://www.sri.inf.ethz.ch/people/dimitadi) - dimitadi@inf.ethz.ch
+* [Dimitar I. Dimitrov](https://www.sri.inf.ethz.ch/people/dimitadi) - dimitadi@inf.ethz.ch
 
 * [Markus Püschel](https://acl.inf.ethz.ch/people/markusp/) - pueschel@inf.ethz.ch
 
