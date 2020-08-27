@@ -451,7 +451,7 @@ def create_model(nn, LB_N0, UB_N0, nlb, nub, relu_groups, numlayer, use_milp):
             #    use_milp = True
             #else:
             #    use_milp = False
-            milp_for_fc = (nn.conv_counter > 0) and (len(nlb[i])<1000)
+            milp_for_fc = (nn.conv_counter > 0) and (len(nlb[i])<1000) and len(specLB) < 1000
             if relu_groups is None:
                 counter = handle_relu(model, var_list, counter, len(nlb[i]), nlb[index-1], nub[index-1], [], use_milp, milp_for_fc)
             #elif(use_milp):
