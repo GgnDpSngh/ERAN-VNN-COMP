@@ -72,8 +72,6 @@ make
 make install
 cd ..
 
-virtualenv -p python3.7 eran
-source eran/bin/activate
 
 
 wget https://packages.gurobi.com/9.0/gurobi9.0.0_linux64.tar.gz
@@ -104,14 +102,14 @@ wget https://files.sri.inf.ethz.ch/eran/nets/tensorflow/mnist/mnist_relu_3_50.tf
 
 ldconfig
 
-mkdir tf_verify/results
+mkdir results
 
-mkdir tf_verify/results/acasxu
+mkdir results/acasxu
 
-mkdir tf_verify/results/FFN_relu
+mkdir results/FFN_relu
 
-mkdir tf_verify/results/colt
+mkdir results/colt
 
-mkdir tf_verify/results/oval
+mkdir results/oval
 
-mkdir tf_verify/results/neel
+mkdir results/neel
