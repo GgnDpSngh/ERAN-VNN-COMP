@@ -48,11 +48,6 @@ Note that to run ERAN with Gurobi one needs to obtain an academic license for gu
 To install the remaining python dependencies (numpy and tensorflow), type:
 
 ```
-virtualenv -p python3.7 eran
-source eran/bin/activate
-cd gurobi900/linux64/
-python3 setup.py install
-cd ../../
 pip3 install -r requirements.txt
 ```
 
@@ -99,7 +94,9 @@ Our code for PGD attacks require tensorflow models so we converted the onnx file
 
 ```
 cd attacks
-
+virtualenv -p python3.7 eran
+source eran/bin/activate
+pip3 install tensorflow==1.14
 ./run_attacks_neel.sh
 ./run_attacks_pat.sh
 ./run_attacks_colt.sh
