@@ -239,7 +239,6 @@ def handle_relu(model,var_list, affine_counter, num_neurons, lbi, ubi, relu_grou
     start= len(var_list)
     binary_counter = start
     relu_counter = start
-    print("neurons ", milp_for_fc)
     if(use_milp==1) or milp_for_fc:
     #if num_neurons <= 1000:
         #indicator variables

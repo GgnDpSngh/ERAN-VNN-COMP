@@ -182,8 +182,19 @@ class Analyzer:
             self.nn.pool_counter = 0
             self.nn.residual_counter = 0
             self.nn.activation_counter = 0
+            first_FC = 0
+            milp_for_FC = False
+            is_conv = False
+            for i in range(self.nn.numlayer):
+                if self.nn.layertypes[i]=='FC':
+                    first_FC = i
+                    break
+                if self.nn.layertypes[i] == 'Conv':
+                    is_conv = True
+            if len(nlb[first_FC]) < 1000 and is_conv:
+                milp_for_FC = True
             counter, var_list, model = create_model(self.nn, self.nn.specLB, self.nn.specUB, nlb, nub,self.relu_groups, self.nn.numlayer, config.complete==True)
-            if config.complete==True:
+            if config.complete==True or milp_for_FC:
                 model.setParam(GRB.Param.TimeLimit,self.timeout_milp)
             else:
                 model.setParam(GRB.Param.TimeLimit,self.timeout_lp)
@@ -221,7 +232,7 @@ class Analyzer:
                                 obj += 1*var_list[counter+label]
                                 obj += -1*var_list[counter + j]
                                 model.setObjective(obj,GRB.MINIMIZE)
-                                if config.complete == True:
+                                if config.complete == True or milp_for_FC:
                                     model.optimize(milp_callback)
                                     if model.objbound <= 0:
                                         flag = False
