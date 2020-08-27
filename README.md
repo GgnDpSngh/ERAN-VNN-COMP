@@ -27,7 +27,7 @@ Requirements
 ------------
 GNU C compiler, ELINA, Gurobi's Python interface,
 
-python3.6 or higher, tensorflow 1.11 or higher, numpy.
+python3.7, tensorflow 1.11 or higher, numpy.
 
 
 Installation
@@ -48,6 +48,8 @@ Note that to run ERAN with Gurobi one needs to obtain an academic license for gu
 To install the remaining python dependencies (numpy and tensorflow), type:
 
 ```
+virtualenv -p python3.7 eran
+source eran/bin/activate
 pip3 install -r requirements.txt
 ```
 

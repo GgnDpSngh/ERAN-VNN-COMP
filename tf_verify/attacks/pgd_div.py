@@ -1,7 +1,7 @@
 import tensorflow as tf
 import numpy as np
 if tf.__version__[0]=='2':
-    from tf.compat.v1.contrib import graph_editor as ge
+    import graph_def_editor as ge
 else:
     from tensorflow.contrib import graph_editor as ge
 
